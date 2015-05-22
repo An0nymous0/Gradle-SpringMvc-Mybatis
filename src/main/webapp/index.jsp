@@ -12,7 +12,7 @@
   </head>
   <body>
     <td>
-      <tr></tr>
+      <tr>test</tr>
     </td>
   </body>
 </html>
