@@ -2,9 +2,13 @@ group 'Gradle-SpringMvc-Mybatis'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
-apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: 'war'    //有这行时我们需要创建 src/main/webapp 目录
 
-sourceCompatibility = 1.5
+//JDK 8
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -12,4 +16,11 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+
+//项目建立时执行。自动建立source目录和resources目录
+task createJavaProject << {
+    sourceSets*.java.srcDirs*.each { it.mkdirs() }
+    sourceSets*.resources.srcDirs*.each { it.mkdirs() }
 }
