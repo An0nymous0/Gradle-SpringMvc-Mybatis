@@ -12,7 +12,8 @@
   </head>
   <body>
     <td>
-      <tr>test</tr>
+      <a href="/showJsp">jumpJsp</a>
+      <a href="/static/test.html">restful</a>
     </td>
   </body>
 </html>
