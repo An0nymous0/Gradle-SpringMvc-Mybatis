@@ -1,6 +1,8 @@
 package com.saeframework.controller.restful;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Objects;
@@ -11,7 +13,9 @@ import java.util.Objects;
 @RestController
 public class restDemo {
     @RequestMapping("/rest")
-    public Object view() {
-       return "restful-showcase";
+    public JSONObject view() {
+        JSONObject jsonObj = new JSONObject(true);
+        jsonObj.put("name","restful-showcase");
+       return jsonObj;
     }
 }

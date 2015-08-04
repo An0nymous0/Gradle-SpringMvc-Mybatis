@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="demoService">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>angularjs</title>
 </head>
-<body>
-静态资源测试
+<body ng-controller="demoController">
+Your name: <input type="text" ng-model="yourname" placeholder="World">
+<hr>
+
+Hello {{yourname || 'World' }}!<br>
+this is server data : {{ name }}
+
+<script src="/static/angularjs/angular.min.js"></script>
+<script src="/static/angularjs/angular-resource.min.js"></script>
+<script src="/static/angularjs/myapp.js"></script>
 </body>
 </html>
